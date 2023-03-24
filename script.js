@@ -1,10 +1,12 @@
 //your JS code here. If required.
 
-new Promise((resolve,reject)=>{
+const myPromise = new Promise((resolve,reject)=>{
 	setTimeout(()=>{
-		
+		resolve("Hello, world!")
 	},1000);
 })
 var res = "Hello, world!";
 
-document.getElementById('output').innerText = res;
+myPromise.then((result)=>{
+	document.getElementById('output').innerText = result;
+})
